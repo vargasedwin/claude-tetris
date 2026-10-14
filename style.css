@@ -252,3 +252,59 @@ kbd {
 #restart-btn:hover {
   background: var(--accent-hover);
 }
+
+/* ---- Skins ---- */
+#skin-select {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-60%);
+  height: 26px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--board-bg);
+  color: var(--text);
+  font-size: 12px;
+  padding: 0 4px;
+  cursor: pointer;
+}
+
+#skin-select:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+:root[data-skin="neon"] {
+  --grid: #15152a;
+}
+
+/* neón: tablero negro en ambos temas (sin tocar --board-bg del resto de la UI) */
+:root[data-skin="neon"] #board,
+:root[data-skin="neon"] #next-canvas {
+  background: #000000;
+}
+
+:root[data-skin="pastel"] {
+  --board-bg: #2b2a3d;
+  --grid: #34334a;
+}
+
+:root[data-skin="pastel"][data-theme="light"] {
+  --board-bg: #fff8fb;
+  --grid: #f0e4ec;
+}
+
+:root[data-skin="pixel"] {
+  --board-bg: #0c0c14;
+  --grid: #1c1c2a;
+}
+
+:root[data-skin="pixel"][data-theme="light"] {
+  --board-bg: #ebe9df;
+  --grid: #d6d3c4;
+}
+
+:root[data-skin="neon"] #board {
+  border-color: #00e5ff;
+  box-shadow: 0 0 24px rgba(0, 229, 255, 0.35);
+}

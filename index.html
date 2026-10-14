@@ -11,12 +11,25 @@
     } catch (e) {
       document.documentElement.dataset.theme = 'dark';
     }
+    try {
+      var skin = localStorage.getItem('tetris-skin');
+      document.documentElement.dataset.skin =
+        ['retro', 'neon', 'pastel', 'pixel'].indexOf(skin) >= 0 ? skin : 'retro';
+    } catch (e) {
+      document.documentElement.dataset.skin = 'retro';
+    }
   </script>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="wrapper">
     <div class="title-bar">
+      <select id="skin-select" aria-label="Skin" title="Apariencia">
+        <option value="retro">Retro</option>
+        <option value="neon">Neón</option>
+        <option value="pastel">Pastel</option>
+        <option value="pixel">Pixel art</option>
+      </select>
       <h1 class="game-title">TETRIS</h1>
       <button id="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Modo claro" title="Modo claro / oscuro">
         <span aria-hidden="true">🌙</span><span aria-hidden="true">☀️</span>
