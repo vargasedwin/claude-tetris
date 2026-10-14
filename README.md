@@ -37,6 +37,7 @@ Es una versión jugable del Tetris clásico con todas las mecánicas que esperar
 - Las **7 piezas estándar** (I, O, T, S, Z, J, L) con colores diferenciados.
 - **Rotación** con _wall kicks_ básicos (pequeños desplazamientos para que la pieza pueda rotar pegada a la pared).
 - **Soft drop** (bajada acelerada) y **hard drop** (caída instantánea).
+- **Skins** seleccionables (Retro, Neón, Pastel, Pixel art) desde el selector de la barra de título; la preferencia se guarda en `localStorage` (`tetris-skin`) y se aplica sin recargar. Cada skin se define en el objeto `SKINS` de `game.js`.
 - **Pieza fantasma** (_ghost piece_): muestra dónde aterrizará la pieza actual.
 - **Vista previa** de la siguiente pieza.
 - **Sistema de puntuación** clásico de Tetris (100 / 300 / 500 / 800 multiplicado por nivel).
