@@ -86,6 +86,10 @@ Después abre `http://localhost:8000` en el navegador.
 | `Espacio` | Hard drop (caída instantánea)     |
 | `P`       | Pausar / reanudar                 |
 
+### Récords
+
+El juego arranca en una pantalla de inicio con el top 5 de puntuaciones (guardado en `localStorage`, clave `tetris-records`), el mejor combo y las líneas máximas en una partida. Al terminar, si la puntuación entra en el top se pide un nombre (máx. 12 caracteres) y la fila queda resaltada. El enlace "Resetear récords" borra todo tras una confirmación.
+
 ---
 
 ## Cómo funciona
